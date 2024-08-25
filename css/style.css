@@ -107,13 +107,5 @@ footer {
 }
 
 /*Centralizar os elementos do navbar excepto o item de línguas*/
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-.content {
-    flex: 1;
-}
+
 
