@@ -116,22 +116,4 @@ body {
 .content {
     flex: 1;
 }
-footer {
-    background-color: #343a40;
-    color: white;
-}
-.navbar-nav {
-    flex-direction: row;
-}
-.navbar-nav .nav-item {
-    margin: 0 10px; /* Ajusta o espaço entre os itens do menu */
-}
-.navbar-nav .nav-link {
-    padding: 0.5rem 1rem; /* Ajusta o padding para os links */
-}
-.language-select {
-    margin-left: 20px; /* Ajusta o espaço à esquerda do seletor de idioma */
-}
-.navbar {
-    justify-content: center;
-}
+
