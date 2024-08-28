@@ -40,19 +40,11 @@
                             <li><a class="dropdown-item" href="services-tratamento-superficies.html">Tratamento de Superfícies</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lang="products">
-                            Produtos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Rolamentos</a></li>
-                            <li><a class="dropdown-item" href="#">Chumaceiras</a></li>
-                            <li><a class="dropdown-item" href="#">Falanges</a></li>
-                            <li><a class="dropdown-item" href="#">Lubrificantes industriais</a></li>
-                            <li><a class="dropdown-item" href="#">Rolos transportadoras</a></li>
-                            <li><a class="dropdown-item" href="#">Casas Modulares chave na mão</a></li>
-                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html" data-lang="products">Produtos</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="contacts.html" data-lang="contacts">Contato</a>
                     </li>
@@ -69,43 +61,44 @@
     </nav>
 
     <!-- Página de Contato -->
-    <div class="container mt-5">
-        <h1 class="text-center mb-4" data-lang="contacts">Contatos</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h4 data-lang="get-in-touch">Entre em Contato</h4>
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label" data-lang='name'>Nome</label>
-                        <input type="text" class="form-control" id="name" data-lang="your-name" placeholder="" data-lang-placeholder="your-name">
-
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label" data-lang="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="message" class="form-label" data-lang="message">Mensagem</label>
-                        <textarea class="form-control" id="message" rows="5" placeholder=""></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" data-lang="to-send">Enviar</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <h4 data-lang="contact-information">Informações de Contato</h4>
-                <ul class="list-unstyled">
-                    <li><strong data-lang="adress">Endereço:</strong> Avenida Bento de Jesus Caraça, 81 6 E, Setúbal, Portugal</li>
-                    <li><strong data-lang="telephone">Telefone:</strong> +351 936 598 978</li>
-                    <li><strong data-lang="email">Email:</strong> info@lgex.com</li>
-                </ul>
-                <!-- Google Maps -->
-                <div class="map-responsive">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.3634404536274!2d-8.873874824613083!3d38.525389568569295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1942f870456ef1%3A0x8b7a3c0e5427ae56!2sAv.%20Bento%20de%20Jesus%20Cara%C3%A7a%2081%2C%202910-430%20Set%C3%BAbal!5e0!3m2!1spt-PT!2spt!4v1724544415315!5m2!1spt-PT!2spt" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Página de Contato -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4" data-lang=""></h1>
+    <div class="row">
+        <div class="col-md-6 mb-4"> <!-- Adicionei mb-4 para margem inferior -->
+            <h4 class="mb-3" data-lang="get-in-touch">Entre em Contato</h4> <!-- Adicionei mb-3 para margem inferior -->
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label" data-lang='name'>Nome</label>
+                    <input type="text" class="form-control" id="name" data-lang="your-name" placeholder="" data-lang-placeholder="your-name">
                 </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label" data-lang="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="message" class="form-label" data-lang="message">Mensagem</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder=""></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2" data-lang="to-send">Enviar</button> <!-- Adicionei mt-2 para margem superior -->
+            </form>
+        </div>
+        <div class="col-md-6 mb-4"> <!-- Adicionei mb-4 para margem inferior -->
+            <h4 class="mb-3" data-lang="contact-information">Informações de Contato</h4> <!-- Adicionei mb-3 para margem inferior -->
+            <ul class="list-unstyled">
+                <li><strong data-lang="adress">Endereço:</strong> Avenida Bento de Jesus Caraça, 81 6 E, Setúbal, Portugal</li>
+                <li><strong data-lang="telephone">Telefone:</strong> +351 936 598 978</li>
+                <li><strong data-lang="email">Email:</strong> info@lgex.com</li>
+            </ul>
+            <!-- Google Maps -->
+            <div class="map-responsive mt-3"> <!-- Adicionei mt-3 para margem superior -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.3634404536274!2d-8.873874824613083!3d38.525389568569295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1942f870456ef1%3A0x8b7a3c0e5427ae56!2sAv.%20Bento%20de%20Jesus%20Cara%C3%A7a%2081%2C%202910-430%20Set%C3%BAbal!5e0!3m2!1spt-PT!2spt!4v1724544415315!5m2!1spt-PT!2spt" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3 mt-5">

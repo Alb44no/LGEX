@@ -8,107 +8,133 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-milk bg-milk">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/400PngdpiLogo.png" alt="LGEX" height="70">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre Nós</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="services_services.html">Serviços</a>
-                    </li>
-
-                    
-				 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Produtos
-                    </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item">
-                                Rolamentos
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item">
-                                Chumaceiras
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item">
-                                Falanges
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item">
-                                Lubrificantes industriais
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item">
-                                Rolos transportadoras
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item">
-                               
-                                </a>
-                            </li>
-                        
-                        </ul>
+   <!-- Navbar -->
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-milk bg-milk">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/400PngdpiLogo.png" alt="LGEX" height="70">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
-                    
-                   <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Contato</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Língua
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="#" onclick="changeLanguage('pt')">
-                                    <img src="img/portugal_.png" alt="Língua Portuguesa" height="40">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#" onclick="changeLanguage('fr')">
-                                    <img src="img/frança_.png" alt="Língua Francesa" height="40">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#" onclick="changeLanguage('de')">
-                                    <img src="img/alemanha_.png" alt="Língua Alemã" height="40">
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-lang="about-us">Sobre Nós</a>
+                </li>
+
+                <!-- Dropdown de Serviços -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Serviços
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                    <li><a class="dropdown-item" href="services-metalomecanica.html">Metalomecânica</a></li>
+                    <li><a class="dropdown-item" href="services-mecanica-industrial.html">Mecânica Industrial</a></li>
+                    <li><a class="dropdown-item" href="services-pintura.html">Pintura</a></li>
+                    <li><a class="dropdown-item" href="services-reparacao-maquinas.html">Reparação de Máquinas</a></li>
+                    <li><a class="dropdown-item" href="services-construcao-estruturas.html">Construção de Estruturas Metálicas</a></li>
+                    <li><a class="dropdown-item" href="services-tratamento-superficies.html">Tratamento de Superfícies</a></li>
                 </ul>
-            </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="products.html" data-lang="products">Produtos</a>
+            </li>
+             
+                
+               <li class="nav-item">
+                    <a class="nav-link" href="contacts.html" data-lang="contacts">Contato</a>
+                </li>
+                
+                <label for="language-select"></label>
+                <select id="language-select">
+                    <option value="en" >English</option>
+                    <option value="fr" >Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="pt" selected>Português</option>
+                </select>
+
+                
+
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
+
+
+<!-- services Section -->
+</br>
+</br>
+    <section class="about-section py-5">
+        <div class="container">
+            <h1>Produtos</h1>
+        </div>
+    </section>
+
+    <!-- Services Section More -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4"></h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 fixed-card">
+                    <img src="imagem/metalomecanica.jpg" class="card-img-top fixed-image" alt="Metalomecânica">
+                    <div class="card-body">
+                        <h5 class="card-title">Rolamentos</h5>
+                        <p class="card-text">Oferecemos serviços completos de metalomecânica, desde a fabricação até a manutenção de estruturas metálicas.</p>
+                        <a href="services-metalomecanica.html" class="btn btn-outline-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 fixed-card">
+                    <img src="imagem/mecanicanica_industrial.jpg" class="card-img-top fixed-image" alt="Mecânica Industrial">
+                    <div class="card-body">
+                        <h5 class="card-title">Chumaceiras</h5>
+                        <p class="card-text">Especialistas em mecânica industrial, realizamos manutenção preventiva e corretiva em equipamentos industriais.</p>
+                        <a href="services-mecanica-industrial.html" class="btn btn-outline-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 fixed-card">
+                    <img src="imagem/pintura_industrial.jfif" class="card-img-top fixed-image" alt="Pintura Industrial">
+                    <div class="card-body">
+                        <h5 class="card-title">Falanges</h5>
+                        <p class="card-text">A pintura industrial é fundamental para proteger e prolongar a vida útil de equipamentos e estruturas metálicas.</p>
+                        <a href="services-pintura.html" class="btn btn-outline-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card mb-4 fixed-card">
+                    <img src="imagem/pintura_industrial.jfif" class="card-img-top fixed-image" alt="Pintura Industrial">
+                    <div class="card-body">
+                        <h5 class="card-title">Lubrificantes industriais</h5>
+                        <p class="card-text">A pintura industrial é fundamental para proteger e prolongar a vida útil de equipamentos e estruturas metálicas.</p>
+                        <a href="services-pintura.html" class="btn btn-outline-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 LGEX Manutenção Industrial. Todos os direitos reservados.</p>
+        <p data-lang="copyright">&copy; 2024 LGEX Manutenção Industrial. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -120,7 +146,17 @@
                 'advanced-technology': 'Tecnologia Avançada',
                 'technology-description': 'Inovação para máxima eficiência.',
                 'experienced-team': 'Equipe Experiente',
-                'team-description': 'Profissionais altamente qualificados.'
+                'team-description': 'Profissionais altamente qualificados.',
+                
+                'about-us':'Sobre Nós',
+                'services':'Serviços',
+                'products':'Productos',
+                'contacts':'Contactos',
+
+                 'copyright':' 2024 LGEX Manutenção Industrial. Todos os direitos reservados.'
+                
+                
+                
             },
             fr: {
                 'quality-service': 'Service de Qualité',
@@ -128,7 +164,18 @@
                 'advanced-technology': 'Technologie Avancée',
                 'technology-description': 'Innovation pour une efficacité maximale.',
                 'experienced-team': 'Équipe Expérimentée',
-                'team-description': 'Professionnels hautement qualifiés.'
+                'team-description': 'Professionnels hautement qualifiés.',
+
+                'about-us':'À propos de Nous',
+                'services':'Services',
+                'products':'Produits',
+                'contacts':'Contacts',
+
+                'copyright':'2024 LGEX Maintenance Industrielle. Tous droits réservés.'
+                
+
+
+                
             },
             de: {
                 'quality-service': 'Qualitätsservice',
@@ -136,20 +183,52 @@
                 'advanced-technology': 'Fortschrittliche Technologie',
                 'technology-description': 'Innovation für maximale Effizienz.',
                 'experienced-team': 'Erfahrenes Team',
-                'team-description': 'Hochqualifizierte Fachleute.'
-            }
+                'team-description': 'Hochqualifizierte Fachleute.',
+
+                'about-us':'Über uns',
+                'services':'Dienstleistungen',
+                'products':'Produkte',
+                'contacts':'Kontakte',
+
+                 'copyright':'2024 LGEX Industrielle Wartung. Alle Rechte vorbehalten.'
+                
+
+            },
+            en: {  // Traduções para inglês
+                'quality-service': 'Quality Service',
+                'quality-description': 'Excellence and precision in every project.',
+                'advanced-technology': 'Advanced Technology',
+                'technology-description': 'Innovation for maximum efficiency.',
+                'experienced-team': 'Experienced Team',
+                'team-description': 'Highly skilled professionals.',
+
+                'about-us':'About us',
+                'services':'Services',
+                'products':'Products',
+                'contacts':'Contacts',
+
+                'copyright':'2024 LGEX Industrial Maintenance. All rights reserved.'
+    }
         };
 
         function changeLanguage(language) {
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                el.textContent = translations[language][el.getAttribute('data-lang')];
-            });
-        }
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.textContent = translations[language][el.getAttribute('data-lang')];
+    });
+   }
 
-        // Set default language to Portuguese on page load
-        document.addEventListener("DOMContentLoaded", function() {
-            changeLanguage('pt');
-        });
+   document.addEventListener("DOMContentLoaded", function() {
+    changeLanguage('pt'); // Define o idioma padrão para Português ao carregar a página
+    });
+
+   var selectElement = document.getElementById("language-select");
+
+// Adiciona o listener de evento de mudança ao select, não ao document
+selectElement.addEventListener("change", function() {
+    var selectedValue = selectElement.value; // Obtém o valor selecionado atual
+    changeLanguage(selectedValue); // Chama a função com o novo idioma selecionado
+});
+        
     </script>
 </body>
 </html>
