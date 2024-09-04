@@ -61,7 +61,7 @@ html, body {
 
 
 .navbar a:hover {
-    text-decoration: black;
+    text-decoration: white;
   }
 
   
@@ -106,6 +106,43 @@ html, body {
 .map-responsive {
     margin-top: 20px;
 }
+
+/* */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar, footer {
+    background-color: #66CDAA;
+    color: white;
+}
+
+.nav-link, .btn {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover, .btn:hover {
+    color: #000;
+    background-color: #ddd;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 8px;
+}
+
 
 
 
