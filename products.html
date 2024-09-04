@@ -57,7 +57,7 @@
                     <option value="en" >English</option>
                     <option value="fr" >Français</option>
                     <option value="de">Deutsch</option>
-                    <option value="pt" selected>Português</option>
+                    <option value="pt">Português</option>
                 </select>
 
                 
@@ -374,16 +374,32 @@
    }
 
    document.addEventListener("DOMContentLoaded", function() {
-    changeLanguage('pt'); // Define o idioma padrão para Português ao carregar a página
+    var selectElement = document.getElementById("language-select");
+
+    // Função para alterar o idioma e salvar a escolha
+    function changeLanguage(language) {
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            el.textContent = translations[language][el.getAttribute('data-lang')];
+        });
+        localStorage.setItem('selectedLanguage', language); // Salva o idioma no localStorage
+    }
+
+    // Carregar o idioma salvo no localStorage ao abrir a página
+    var savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+        changeLanguage(savedLanguage);
+        selectElement.value = savedLanguage; // Ajusta o seletor para refletir o idioma salvo
+    } else {
+        changeLanguage('pt'); // Define o idioma padrão para Português ao carregar a página
+    }
+
+    // Evento de mudança para o seletor de idiomas
+    selectElement.addEventListener("change", function() {
+        var selectedValue = selectElement.value; // Obtém o valor selecionado atual
+        changeLanguage(selectedValue); // Chama a função com o novo idioma selecionado
     });
-
-   var selectElement = document.getElementById("language-select");
-
-// Adiciona o listener de evento de mudança ao select, não ao document
-selectElement.addEventListener("change", function() {
-    var selectedValue = selectElement.value; // Obtém o valor selecionado atual
-    changeLanguage(selectedValue); // Chama a função com o novo idioma selecionado
 });
+
         
     </script>
 </body>
