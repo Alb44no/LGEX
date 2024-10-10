@@ -1,0 +1,111 @@
+/* Estilo para o fundo escurecido */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Aparece sobre outros elementos */
+}
+
+/* Estilo para a caixa de diálogo */
+.alert-box {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 1001; /* Aparece sobre o fundo */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para o texto do alerta */
+.alert-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o botão de confirmação */
+.alert-button {
+    background: linear-gradient(135deg, #4dffe1, #ff0000); /* Gradiente vermelho */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.alert-button:hover {
+    background-color: #ff4d4d; /* Alteração da cor ao hover */
+}
+
+
+/* Estilo aprimorado para o botão SOS */
+.sos-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Sempre visível */
+}
+
+.sos-button {
+    background: linear-gradient(135deg, #4dffe1, #ff0000); /* Gradiente vermelho */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sos-button:hover {
+    background: linear-gradient(135deg, #ff6666); /* Alteração de cor ao hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1); /* Leve ampliação ao hover */
+}
+
+/* Animação de pulso para chamar a atenção */
+.sos-button::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 0, 0, 0.4);
+    z-index: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.sos-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Ícone do botão */
+.sos-button i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.sos-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
