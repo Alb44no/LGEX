@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    
 }
 
 .container-fluid {
-    color: #F0F8FF;
+    color: #fff0f2;
 }
 
 .carousel-caption {
@@ -54,16 +55,20 @@ html, body {
     cursor: pointer;
 }
 
-.navbar ul {
-    text-align: center;
+
+
+
+.navbar ul a {
+    text-align: left;
   }
 
 
-
+/*
 .navbar a:hover {
-    text-decoration: white;
+    text-decoration: none;
+    
   }
-
+*/
   
 
 /* CSS personalizado para ajustar a posição das legendas do carrossel */
@@ -132,8 +137,43 @@ h1, h2, h3, h4, h5 {
 
 .nav-link:hover, .btn:hover {
     color: #000;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
 }
+
+
+.dropdown-flag{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+    background-color: transparent;
+    background: transparent !important;
+  
+}
+
+/* Remove o fundo e as bordas do dropdown */
+.dropdown-menu a {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none !important;
+    color: #fff0f2;
+   
+}
+
+.dropdown-menu {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;    
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
 
 
 

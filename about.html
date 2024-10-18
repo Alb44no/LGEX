@@ -71,14 +71,45 @@
                         <a class="nav-link" href="contacts.html" data-lang="contacts">Contatos</a>
                     </li>
                     
-                    <label for="language-select"></label>
-                    <select id="language-select">
-                        <option value="en" >English</option>
-                        <option value="fr" >Français</option>
-                        <option value="de">Deutsch</option>
-                        <option value="pt">Português</option>
-                    </select>
+                     <!-- flags section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="language-select" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Apenas a bandeira será exibida aqui -->
+                            <img src="" alt="" class="flag-icon" id="selected-flag" width="25">
+                        </a>
+                        
+                       
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-select" style="width: auto;">
+                           
+                                <!-- Opção para Português -->
+                                <li><a class="dropdown-flag" href="#" data-language="pt">
+                                <img src="img/pt.png" alt="Português" class="flag-icon" id="pt" width="25" onclick="location.reload()">
+                                
+                                </a></li>
+                          
+                                <!-- Opção para Francês -->
+                                <li><a class="dropdown-flag" href="#" data-language="fr">
+                                <img src="img/fr.png" alt="Francês" class="flag-icon" id="fr" width="25" onclick="location.reload()">
+                                
+                                </a></li>
+                                <!-- Opção para Alemão -->
+                                <li><a class="dropdown-flag" href="#" data-language="de">
+                                <img src="img/de.png" alt="Alemão" class="flag-icon" id="de" width="25" onclick="location.reload()">
+                                
+                                </a></li>
+                                <!-- Opção para Inglês -->
+                                <li><a class="dropdown-flag" href="#" data-language="en">
+                                <img src="img/en.png" alt="Inglês" class="flag-icon" id="en" width="25" onclick="location.reload()">
+                                
+                                </a></li>
+                            
+                        
+                        </ul>
+                      
+                    </li>
 
+                  
+                    <!-- flags section -->
                     
 
                 </ul>
@@ -104,7 +135,7 @@
         <div class="row">
             <div class="col-md-6 mb-4">
                 <h2 data-lang='about-us-desc3'>Missão</h2>
-                <p data-lang="mission-desc">Nossa missão é garantir a continuidade operacional das indústrias através de serviços de manutenção preventiva e corretiva, assegurando a máxima eficiência e segurança dos processos industriais de nossos clientes.</p>
+                <p data-lang="mission-desc">Nossa missão é garantir a continuidade operacional das indústrias através de serviços de manutenção preventiva e corretiva, assegurando a máxima eficiência e segurança dos processos industriais dos nossos clientes.</p>
             </div>
             <div class="col-md-6 mb-4">
                 <h2 data-lang="vision">Visão</h2>
@@ -136,7 +167,7 @@
     <div id="customAlert" class="alert-overlay" style="display: none;">
         <div class="alert-box">
             <div class="alert-message">
-                Solicitação de emergência 24/24 <br> a sua disposição: <br> <br> <strong><h4>936 752 249</h4></strong>
+                <p data-lang="sos-alert">Solicitação de emergência, 24/24</p> <p data-lang="sos-alert1"></p>  <strong><h4>+351 936 752 249</h4></strong>
             </div>
             <button class="alert-button" onclick="closeCustomAlert()">OK</button>
         </div>
@@ -144,6 +175,7 @@
 
     <script src="sos_button.js"></script>
     <!-- Botão SOS -->
+     
 
 </section>
 
@@ -208,6 +240,10 @@
                 'painting':'Pintura',
                 'machine-repair':'Reparação de Máquinas',
                 'surface-treatment':'Tratamento de Superfícies',
+                //sos
+                'sos-alert':'Solicitação de emergência, 24/24',
+                'sos-alert1':'a sua disposição :',
+                
                 
                 
                 
@@ -260,6 +296,9 @@
                 'painting':'Peinture',
                 'machine-repair':'Réparation de machines',
                 'surface-treatment':'Traitement de surface',
+                 //sos
+                 'sos-alert':'Demande d`urgence, 24/24',
+                'sos-alert1':'à votre disposition :',
 
                 
             },
@@ -309,6 +348,10 @@
                 'painting':'Malerei',
                 'machine-repair':'Maschinenreparatur',
                 'surface-treatment':'Oberflächenbehandlung',
+                //sos
+                'sos-alert':'Notfallanfrage, 24/24',
+                 'sos-alert1':'Zu Ihrer Verfügung :'
+
 
             },
             en: {  // Traduções para inglês
@@ -359,39 +402,92 @@
                 'li4':'Sustainability: We promote practices that respect the environment and contribute to industrial sustainability.',
                 'machine-repair':'Machine Repair',
                 'surface-treatment':'Surface Treatment',
+                //sos
+                'sos-alert':'Emergency request, 24/24',
+                'sos-alert1':'at your disposal :',
+
 
               
             
             }    
         };
-        document.addEventListener("DOMContentLoaded", function() {
-    var selectElement = document.getElementById("language-select");
+         // Mapa de bandeiras
+    const flagMap = {
+        pt: 'img/pt.png',
+        fr: 'img/fr.png',
+        de: 'img/de.png',
+        en: 'img/en.png'
+    };
 
-    // Função para alterar o idioma e salvar a escolha
+    
+
+    // Função para trocar idioma e bandeira
     function changeLanguage(language) {
+        // Troca o texto com base na língua selecionada
         document.querySelectorAll('[data-lang]').forEach(el => {
-            el.textContent = translations[language][el.getAttribute('data-lang')];
+            const key = el.getAttribute('data-lang');
+            if (translations[language][key]) {
+                el.textContent = translations[language][key];
+            }
         });
-        localStorage.setItem('selectedLanguage', language); // Salva o idioma no localStorage
-    }
+        
+        // Salva o idioma no localStorage
+        localStorage.setItem('selectedLanguage', language);
 
-    // Carregar o idioma salvo no localStorage ao abrir a página
-    var savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-        changeLanguage(savedLanguage);
-        selectElement.value = savedLanguage; // Ajusta o seletor para refletir o idioma salvo
-    } else {
-        changeLanguage('pt'); // Define o idioma padrão para Português ao carregar a página
-    }
+        // Troca a bandeira no dropdown
+        const flagIcon = document.querySelector('#selected-flag');
+        flagIcon.src = flagMap[language];
+        flagIcon.alt = language;
+       
+        //Eliminar a bandeira das opções possíevis caso for selecionado
+        const ptChange = document.querySelector('#pt');
+        const frChange = document.querySelector('#fr');
+        const deChange = document.querySelector('#de');
+        const enChange = document.querySelector('#en');
+      
+        if(flagIcon.src==ptChange.src){
+            ptChange.remove(); // Remove completamente o elemento 
+        }
+        if(flagIcon.src==frChange.src){
+            frChange.remove(); // Remove completamente o elemento 
+            
 
-    // Evento de mudança para o seletor de idiomas
-    selectElement.addEventListener("change", function() {
-        var selectedValue = selectElement.value; // Obtém o valor selecionado atual
-        changeLanguage(selectedValue); // Chama a função com o novo idioma selecionado
+        }
+        if(flagIcon.src==deChange.src){
+            deChange.remove(); // Remove completamente o elemento 
+            
+        }
+        if(flagIcon.src==enChange.src){
+            enChange.remove(); // Remove completamente o elemento 
+            
+        }
+      
+             
+    }
+   
+    // Ao carregar a página, carrega o idioma salvo no localStorage
+    document.addEventListener("DOMContentLoaded", function() {
+        var savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            changeLanguage(savedLanguage);
+            
+        } else {
+            changeLanguage('pt'); // Idioma padrão é o Português
+        }
+
+        // Adiciona eventos de clique às bandeiras no dropdown
+        document.querySelectorAll('.dropdown-flag').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const selectedLanguage = this.getAttribute('data-language');
+                changeLanguage(selectedLanguage);
+                
+       
+            });
+        });
     });
-});
 
-</script>
+    </script>
 
 
 

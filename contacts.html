@@ -6,6 +6,7 @@
     <title>Contato - Empresa de Manutenção Industrial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="code.js" defer></script>
 
     <style>
         body {
@@ -60,17 +61,49 @@
                     <li class="nav-item">
                         <a class="nav-link" href="products.html" data-lang="products">Produtos</a>
                     </li>
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="contacts.html" data-lang="contacts">Contato</a>
                     </li>
-                    <label for="language-select"></label>
-                    <select id="language-select">
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                        <option value="pt">Português</option>
-                    </select>
+                    <!-- flags section -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="language-select" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Apenas a bandeira será exibida aqui -->
+                        <img src="" alt="" class="flag-icon" id="selected-flag" width="25">
+                    </a>
+                    
+                   
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-select" style="width: auto;">
+                       
+                            <!-- Opção para Português -->
+                            <li><a class="dropdown-flag" href="#" data-language="pt">
+                            <img src="img/pt.png" alt="Português" class="flag-icon" id="pt" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                      
+                            <!-- Opção para Francês -->
+                            <li><a class="dropdown-flag" href="#" data-language="fr">
+                            <img src="img/fr.png" alt="Francês" class="flag-icon" id="fr" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                            <!-- Opção para Alemão -->
+                            <li><a class="dropdown-flag" href="#" data-language="de">
+                            <img src="img/de.png" alt="Alemão" class="flag-icon" id="de" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                            <!-- Opção para Inglês -->
+                            <li><a class="dropdown-flag" href="#" data-language="en">
+                            <img src="img/en.png" alt="Inglês" class="flag-icon" id="en" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                        
+                    
+                    </ul>
+                  
+                </li>
+
+              
+                <!-- flags section -->
+
                 </ul>
             </div>
         </div>
@@ -104,7 +137,7 @@
             <h4 class="mb-3" data-lang="contact-information">Informações de Contato</h4> <!-- Adicionei mb-3 para margem inferior -->
             <ul class="list-unstyled">
                 <li><strong data-lang="adress">Endereço:</strong> Rua da Pega Manca-Estrada do Vale da Rosa 119, 2900-002, Setúbal, Portugal</li>
-                <li><strong data-lang="telephone">Telefone :</strong> +351 936752249</li>
+                <li><strong data-lang="telephone">Telefone :</strong> +351 265 097 443</li>
                 <li><strong data-lang="email_">Email:</strong>info@lgex.com</li>
             </ul>
             <!-- Google Maps -->

@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="sos_button.css">
+    <script src="code.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -52,13 +53,45 @@
                     <a class="nav-link" href="contacts.html" data-lang="contacts">Contato</a>
                 </li>
                 
-                <label for="language-select"></label>
-                <select id="language-select">
-                    <option value="en" >English</option>
-                    <option value="fr" >Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="pt">Português</option>
-                </select>
+               <!-- flags section -->
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="language-select" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- Apenas a bandeira será exibida aqui -->
+                    <img src="" alt="" class="flag-icon" id="selected-flag" width="25">
+                </a>
+                
+               
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-select" style="width: auto;">
+                   
+                        <!-- Opção para Português -->
+                        <li><a class="dropdown-flag" href="#" data-language="pt">
+                        <img src="img/pt.png" alt="Português" class="flag-icon" id="pt" width="25" onclick="location.reload()">
+                        
+                        </a></li>
+                  
+                        <!-- Opção para Francês -->
+                        <li><a class="dropdown-flag" href="#" data-language="fr">
+                        <img src="img/fr.png" alt="Francês" class="flag-icon" id="fr" width="25" onclick="location.reload()">
+                        
+                        </a></li>
+                        <!-- Opção para Alemão -->
+                        <li><a class="dropdown-flag" href="#" data-language="de">
+                        <img src="img/de.png" alt="Alemão" class="flag-icon" id="de" width="25" onclick="location.reload()">
+                        
+                        </a></li>
+                        <!-- Opção para Inglês -->
+                        <li><a class="dropdown-flag" href="#" data-language="en">
+                        <img src="img/en.png" alt="Inglês" class="flag-icon" id="en" width="25" onclick="location.reload()">
+                        
+                        </a></li>
+                    
+                
+                </ul>
+              
+            </li>
+
+          
+            <!-- flags section -->
 
                 
 
@@ -186,7 +219,7 @@
     <div id="customAlert" class="alert-overlay" style="display: none;">
         <div class="alert-box">
             <div class="alert-message">
-                Solicitação de emergência 24/24 <br> a sua disposição: <br> <br> <strong><h4>936 752 249</h4></strong>
+                <p data-lang="sos-alert">Solicitação de emergência, 24/24</p> <p data-lang="sos-alert1"></p>  <strong><h4>+351 936 752 249</h4></strong>
             </div>
             <button class="alert-button" onclick="closeCustomAlert()">OK</button>
         </div>
@@ -225,11 +258,11 @@
                 'industrial-piping':'Tubagens industriais',
                 'industrial-piping-desc':'Oferecemos uma gama completa de serviços para tubagens industriais, essenciais para o transporte seguro e eficiente de fluidos e gases em vários setores industriais.',
                 'lifting-baskets':'Cestos de elevação',
-                'lifting-baskets-desc':'Com uma abordagem focada na segurança e conformidade, nossos serviços garantem que os cestos de elevação atendam às normas regulamentares e estejam em condições ideais de uso.',
+                'lifting-baskets-desc':'Com uma abordagem focada na segurança e conformidade, os nossos serviços garantem que os cestos de elevação atendam às normas regulamentares e estejam em condições ideais de uso.',
                 'pavilions':'Pavilhões',
                 'pavilions-desc':'Desenvolvemos projetos personalizados para pavilhões industriais, considerando as especificidades do uso industrial, incluindo resistência, espaçamento e integração com sistemas de manufatura e logística.',
                 'mig-Tig-and-coated-electrode-welding':'Solda Mig, Tig e electródo revestido',
-                'mig-Tig-and-coated-electrode-welding-desc':'Técnicas de soldagem são essenciais para a fabricação e reparo de estruturas metálicas, equipamentos e tubulações, garantindo juntas de alta qualidade e durabilidade.',
+                'mig-Tig-and-coated-electrode-welding-desc':'Técnicas de soldagem são essenciais para a fabricação e reparação de estruturas metálicas, equipamentos e tubulações, garantindo juntas de alta qualidade e durabilidade.',
                 'walkways':'Passadiços',
                 'walkways-desc':'Desenvolvemos e construímos passadiços customizados conforme as necessidades específicas de cada cliente, considerando os requisitos operacionais e de segurança do local.',
                 'staircase':'Escadaria',
@@ -237,7 +270,7 @@
                 'scrap-containers':'Contentores para sucata',
                 'scrap-containers-desc':'Garantimos que todos os nossos contentores atendam às regulamentações ambientais e de segurança, oferecendo soluções responsáveis e conformes.',
                 'industrial-conveyors':'Transportadoras industriais',
-                'industrial-conveyors-desc':'Asseguramos que todos os sistemas de transportadoras sejam confiáveis e seguros, minimizando riscos de paradas inesperadas e garantindo a continuidade das operações.',
+                'industrial-conveyors-desc':'Asseguramos que todos os sistemas de transportadoras sejam confiáveis e seguros, minimizando riscos de paragens inesperadas e garantindo a continuidade das operações.',
                 //Menu dropdown list of services
                 'metalworking-service':'Oferecemos serviços completos de metalomecânica, desde a fabricação até a manutenção de estruturas metálicas.',
                 'Metalworking':'Metalomecânica',
@@ -248,6 +281,9 @@
                 'construction-of-metallic-structures':'Construção de estruturas metálicas',
                 'construction-of-metallic-structures-desc':'Nossa empresa é especializada no desenvolvimento de projetos mecânicos sob medida para atender às necessidades específicas de cada cliente. Desde o design inicial até a implementação final, nossos engenheiros altamente qualificados trabalham em estreita colaboração com você para garantir que cada projeto seja otimizado para desempenho, segurança e eficiência.',
                    //Menu dropdown list of services
+                'sos-alert':'Solicitação de emergência, 24/24',
+                'sos-alert1':'a sua disposição :',
+                
             },
             fr: {
                 'quality-service': 'Service de Qualité',
@@ -291,7 +327,11 @@
                 'construction-of-metallic-structures-desc':'Nous offrons des services complets de construction de structures métalliques, de la conception à l’exécution finale.',
                 'surface-treatment':'Traitement de surface',
                  //Menu dropdown list of services
-                
+                 //sos
+                'sos-alert':'Demande d`urgence, 24/24',
+                'sos-alert1':'à votre disposition :',
+
+             
                 
             },
             de: {
@@ -336,6 +376,8 @@
                 'construction-of-metallic-structures-desc':'Wir bieten komplette Dienstleistungen im Bereich Metallkonstruktionen an, vom Entwurf bis zur endgültigen Ausführung.',
                 'surface-treatment':'Oberflächenbehandlung',
                  //Menu dropdown list of services
+                 'sos-alert':'Notfallanfrage, 24/24',
+                 'sos-alert1':'Zu Ihrer Verfügung :'
                 
             },
             en: {  // Traduções para inglês
@@ -380,6 +422,8 @@
                  'construction-of-metallic-structures-desc':'We offer complete metal structure construction services, from design to final execution.',
                  'surface-treatment':'Surface Treatment',
                  //Menu dropdown list of services
+                 'sos-alert':'Emergency request, 24/24',
+                 'sos-alert1':'at your disposal :',
     
             }
         };

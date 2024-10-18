@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="sos_button.css">
+    <script src="code.js" defer></script>
 </head>
 <body>
    <!-- Navbar -->
@@ -52,13 +53,45 @@
                     <a class="nav-link" href="contacts.html" data-lang="contacts">Contato</a>
             </li>
                 
-                <label for="language-select"></label>
-                <select id="language-select">
-                    <option value="en" >English</option>
-                    <option value="fr" >Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="pt" selected>Português</option>
-                </select>
+                 <!-- flags section -->
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="language-select" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Apenas a bandeira será exibida aqui -->
+                        <img src="" alt="" class="flag-icon" id="selected-flag" width="25">
+                    </a>
+                    
+                   
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-select" style="width: auto;">
+                       
+                            <!-- Opção para Português -->
+                            <li><a class="dropdown-flag" href="#" data-language="pt">
+                            <img src="img/pt.png" alt="Português" class="flag-icon" id="pt" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                      
+                            <!-- Opção para Francês -->
+                            <li><a class="dropdown-flag" href="#" data-language="fr">
+                            <img src="img/fr.png" alt="Francês" class="flag-icon" id="fr" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                            <!-- Opção para Alemão -->
+                            <li><a class="dropdown-flag" href="#" data-language="de">
+                            <img src="img/de.png" alt="Alemão" class="flag-icon" id="de" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                            <!-- Opção para Inglês -->
+                            <li><a class="dropdown-flag" href="#" data-language="en">
+                            <img src="img/en.png" alt="Inglês" class="flag-icon" id="en" width="25" onclick="location.reload()">
+                            
+                            </a></li>
+                        
+                    
+                    </ul>
+                  
+                </li>
+
+              
+                <!-- flags section -->
 
                 
 
@@ -142,7 +175,7 @@
     <div id="customAlert" class="alert-overlay" style="display: none;">
         <div class="alert-box">
             <div class="alert-message">
-                Solicitação de emergência 24/24 <br> a sua disposição: <br> <br> <strong><h4>936 752 249</h4></strong>
+                <p data-lang="sos-alert">Solicitação de emergência, 24/24</p> <p data-lang="sos-alert1"></p>  <strong><h4>+351 936 752 249</h4></strong>
             </div>
             <button class="alert-button" onclick="closeCustomAlert()">OK</button>
         </div>
@@ -179,13 +212,13 @@
                  'copyright':' 2024 LGEX Manutenção Industrial. Todos os direitos reservados.',
                  'machine-repair-on-site':'Reparação de Máquinas em obra',
                  'construction-machines':'Máquinas da construção',
-                 'construction-machines-desc':'Compreendemos a importância crítica destas máquinas em projetos de construção e nos empenhamos em manter sua operacionalidade através de manutenção especializada e suporte técnico contínuo.',
+                 'construction-machines-desc':'Compreendemos a importância crítica destas máquinas em projetos de construção e nos focamos em manter sua operacionalidade através de manutenção especializada e suporte técnico contínuo.',
                  'industrial-handling-machines':'Máquinas de movimentação industrial',
-                 'industrial-handling-machines-desc':'Soluções completas para a manutenção e reparo de máquinas de movimentação industrial, essenciais para operações em armazéns, fábricas e centros de distribuição.',
+                 'industrial-handling-machines-desc':'Soluções completas para a manutenção e reparação de máquinas de movimentação industrial, essenciais para operações em armazéns, fábricas e centros de distribuição.',
                  'agricultural-machines':'Máquinas agrícolas',
                  'agricultural-machines-desc':'Entendemos que as máquinas agrícolas são vitais para a eficiência e produtividade no setor agrário. Por isso, oferecemos serviços especializados de manutenção e reparo para uma ampla gama de equipamentos agrícolas, desde tratores até colheitadeiras e implementos.',
                  'port-machines':'Máquinas portuárias',
-                 'port-machines-desc':'Oferececemos serviços especializados para manutenção e reparo de máquinas portuárias, essenciais para operações eficientes em portos e terminais marítimos.',
+                 'port-machines-desc':'Oferececemos serviços especializados para manutenção e reparação de máquinas portuárias, essenciais para operações eficientes em portos e terminais marítimos.',
                   //Menu dropdown list of services
                 'metalworking-service':'Oferecemos serviços completos de metalomecânica, desde a fabricação até a manutenção de estruturas metálicas.',
                 'Metalworking':'Metalomecânica',
@@ -196,6 +229,10 @@
                 'construction-of-metallic-structures':'Construção de estruturas metálicas',
                 'construction-of-metallic-structures-desc':'Nossa empresa é especializada no desenvolvimento de projetos mecânicos sob medida para atender às necessidades específicas de cada cliente. Desde o design inicial até a implementação final, nossos engenheiros altamente qualificados trabalham em estreita colaboração com você para garantir que cada projeto seja otimizado para desempenho, segurança e eficiência.',
                    //Menu dropdown list of services
+                //sos
+                'sos-alert':'Solicitação de emergência, 24/24',
+                'sos-alert1':'a sua disposição :',
+                
                 
                 
             },
@@ -233,6 +270,9 @@
                 'construction-of-metallic-structures-desc':'Nous offrons des services complets de construction de structures métalliques, de la conception à l’exécution finale.',
                 'surface-treatment':'Traitement de surface',
                  //Menu dropdown list of services
+                //sos
+                'sos-alert':'Demande d`urgence, 24/24',
+                'sos-alert1':'à votre disposition :',
                 
                 
 
@@ -273,6 +313,10 @@
                 'construction-of-metallic-structures-desc':'Wir bieten komplette Dienstleistungen im Bereich Metallkonstruktionen an, vom Entwurf bis zur endgültigen Ausführung.',
                 'surface-treatment':'Oberflächenbehandlung',
                  //Menu dropdown list of services
+                //sos
+                'sos-alert':'Notfallanfrage, 24/24',
+                'sos-alert1':'Zu Ihrer Verfügung :'
+
 
             },
             en: {  // Traduções para inglês
@@ -310,6 +354,10 @@
                  'construction-of-metallic-structures-desc':'We offer complete metal structure construction services, from design to final execution.',
                  'surface-treatment':'Surface Treatment',
                  //Menu dropdown list of services
+                 //sos
+                'sos-alert':'Notfallanfrage, 24/24',
+                'sos-alert1':'Zu Ihrer Verfügung :'
+
     }
         };
 
