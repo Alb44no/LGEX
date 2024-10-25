@@ -63,6 +63,8 @@ html, body {
   }
 
 
+
+
 /*
 .navbar a:hover {
     text-decoration: none;
@@ -144,7 +146,7 @@ h1, h2, h3, h4, h5 {
 .dropdown-flag{
     display: flex;
     justify-content: flex-end;
-    margin-right: 15%;
+    margin-left: 0%;
     background-color: transparent;
     background: transparent !important;
   
