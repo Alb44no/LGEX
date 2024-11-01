@@ -173,6 +173,16 @@ footer {
     width: 100%;
 }
 
+/* CSS para esconder o botão SOS na versão web */
+.sos-button-container {
+    display: none; /* Esconde o botão por padrão */
+}
+
+@media (max-width: 768px) {
+    .sos-button-container {
+        display: block; /* Mostra o botão em telas menores */
+    }
+}
 
 
 
